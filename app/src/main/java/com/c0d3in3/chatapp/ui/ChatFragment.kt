@@ -65,8 +65,8 @@ class ChatFragment(private val messageOwner: MessageOwner) : Fragment() {
         requireActivity().registerReceiver(messageReceiver, IntentFilter(MESSAGES_DATA_UPDATED))
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onPause() {
+        super.onPause()
         requireActivity().unregisterReceiver(messageReceiver)
     }
 
