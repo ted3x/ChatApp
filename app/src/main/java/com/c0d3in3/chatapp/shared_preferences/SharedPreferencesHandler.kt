@@ -22,9 +22,7 @@ object SharedPreferencesHandler{
 
     fun getMessages() : List<Message>{
         val messagesJson = sharedPref.getString(CHAT_KEY, "")
-        if (messagesJson != null) {
-            if(messagesJson.isEmpty()) return emptyList()
-        }
+        if(messagesJson!!.isEmpty()) return emptyList()
         val collectionType: Type =
             object : TypeToken<List<Message>>() {}.type
         return Gson().fromJson(messagesJson, collectionType) as List<Message>
