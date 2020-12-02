@@ -29,14 +29,19 @@ class ChatAdapter(
             SELF_MESSAGE -> {
                 myView = LayoutInflater.from(parent!!.context)
                     .inflate(R.layout.self_message_item, parent, false)
-                myView.selfTV.text = model.message
-                myView.selfDateTV.text = model.messageTimestamp.toDate()
+                myView.apply{
+                    selfTV.text = model.message
+                    selfDateTV.text = model.messageTimestamp.toDate()
+                }
+
             }
             else -> {
                 myView = LayoutInflater.from(parent!!.context)
                     .inflate(R.layout.not_self_message_item, parent, false)
-                myView.notSelfTV.text = model.message
-                myView.notSelfDateTV.text = model.messageTimestamp.toDate()
+                myView.apply{
+                    notSelfTV.text = model.message
+                    notSelfDateTV.text = model.messageTimestamp.toDate()
+                }
             }
         }
         return myView
