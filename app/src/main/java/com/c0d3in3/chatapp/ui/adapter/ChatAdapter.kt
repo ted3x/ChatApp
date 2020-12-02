@@ -49,7 +49,7 @@ class ChatAdapter(
 
     override fun getItem(position: Int) = messages[position]
 
-    override fun getItemId(position: Int) = 0.toLong()
+    override fun getItemId(position: Int) = position.toLong()
 
     override fun getCount() = messages.size
 
