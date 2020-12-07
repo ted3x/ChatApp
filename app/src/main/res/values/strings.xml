@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ChatApp</string>
+    <string name="enter_message">დაწერე შეტყობინება...</string>
+    <string name="message_is_empty">მესიჯი ცარიელია!</string>
 </resources>

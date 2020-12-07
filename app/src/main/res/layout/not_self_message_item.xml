@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/notSelfTV"
+        style="@style/messageStyle"
+        tools:text="ზეზვა"
+        android:background="@drawable/not_self_message_drawable" />
+
+    <TextView
+        android:id="@+id/notSelfDateTV"
+        style="@style/dateStyle"
+        tools:text="ოქტ 09, 20:55"/>
+
+</LinearLayout>
